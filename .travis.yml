@@ -6,6 +6,7 @@ python:
 before_intall:
   - pip install pip --upgrade
 install:
+  - pip install gitpython
   - pip install ansible-lint
 script:
   pytest test/*.py
