@@ -1,0 +1,7 @@
+---
+  - src: https://github.com/geerlingguy/ansible-role-nginx
+    version: master
+  - src: https://github.com/geerlingguy/ansible-role-certbot
+    version: 0.0.0
+  - src: https://github.com/geerlingguy/ansible-role-elasticsearch
+    version: 0.0.0
