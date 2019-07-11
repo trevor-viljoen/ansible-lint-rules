@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[co]
+*$py.class
+
+# Packages
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.tox
+
+# Needed for CLI tests
+.sandbox
+
+# pyenv
+.python-version
+
+# Coverage artifacts
+.coverage
+coverage.xml
+
+# git linting
+.gitlint*
+
+# git message
+.gitmessage
