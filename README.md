@@ -1,5 +1,5 @@
 # Ansible Lint Rules
-[![Build Status](https://travis-ci.com/trevor-viljoen/ansible-lint-rules.svg?branch=master)](https://travis-ci.org/trevor-viljoen/ansible-lint-rules)
+[![Build Status](https://travis-ci.com/trevor-viljoen/ansible-lint-rules.svg?branch=master)](https://travis-ci.com/trevor-viljoen/ansible-lint-rules)
 
 This is a package of custom [ansible-lint rules](https://github.com/ansible/ansible-lint).
 
