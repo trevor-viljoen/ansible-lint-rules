@@ -27,6 +27,7 @@ class RoleUsesTagRule(AnsibleLintRule):  # pylint: disable=invalid-name
         ' the head of a branch'
     )
     severity = 'HIGH'
+    version_added = 'v0.1.0'
     tags = ['metadata', 'TagsOnly']
 
     def matchplay(self, file, data):  # pylint: disable=no-self-use,inconsistent-return-statements,line-too-long
