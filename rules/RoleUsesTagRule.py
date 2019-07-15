@@ -38,7 +38,7 @@ class RoleUsesTagRule(AnsibleLintRule):  # pylint: disable=invalid-name
             src = data.get('src', None)
             if 'git+https' in src:
                 src = "{}:{}".format('https', src.split(':')[1])
-            ver = data.get('version', None)
+            ver = str(data.get('version', None))
             if not src:
                 return [({'requirements.yml': data}, "No 'src' found")]
             repo_name = src.split('/')[-1]
@@ -49,9 +49,9 @@ class RoleUsesTagRule(AnsibleLintRule):  # pylint: disable=invalid-name
             tags = [ref for ref in refs if ref['ref_type'] == 'tag']
             branches = [ref for ref in refs if ref['ref_type'] == 'branch']
             if ver:
-                if ver in [branch['ref'] for branch in branches]:
+                if ver in [str(branch['ref']) for branch in branches]:
                     errmsg = "{} is a branch and not a valid tag in repo: {}".format(ver, src)
                     return [({file['path']: data}, errmsg)]
-                if ver not in [tag['ref'] for tag in tags]:
+                if ver not in [str(tag['ref']) for tag in tags]:
                     errmsg = "{} is not a valid tag in repo: {}".format(ver, src)
                     return [({file['path']: data}, errmsg)]
